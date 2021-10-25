@@ -1,0 +1,247 @@
+Ejercicio 1
+cata@cata-UX550VD:~/Documents/Segundo Semestre/Ing_Software_III/ing-software-3/practico_5/maven/practico$ mvn clean install 
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< ar.edu.ucc:proyecto-01 >-----------------------
+[INFO] Building proyecto-01 0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ proyecto-01 ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ proyecto-01 ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /home/cata/Documents/Segundo Semestre/Ing_Software_III/ing-software-3/practico_5/maven/practico/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ proyecto-01 ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ proyecto-01 ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /home/cata/Documents/Segundo Semestre/Ing_Software_III/ing-software-3/practico_5/maven/practico/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ proyecto-01 ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ proyecto-01 ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ proyecto-01 ---
+[WARNING] JAR will be empty - no content was marked for inclusion!
+[INFO] Building jar: /home/cata/Documents/Segundo Semestre/Ing_Software_III/ing-software-3/practico_5/maven/practico/target/proyecto-01-0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ proyecto-01 ---
+[INFO] Installing /home/cata/Documents/Segundo Semestre/Ing_Software_III/ing-software-3/practico_5/maven/practico/target/proyecto-01-0.1-SNAPSHOT.jar to /home/cata/.m2/repository/ar/edu/ucc/proyecto-01/0.1-SNAPSHOT/proyecto-01-0.1-SNAPSHOT.jar
+[INFO] Installing /home/cata/Documents/Segundo Semestre/Ing_Software_III/ing-software-3/practico_5/maven/practico/pom.xml to /home/cata/.m2/repository/ar/edu/ucc/proyecto-01/0.1-SNAPSHOT/proyecto-01-0.1-SNAPSHOT.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.942 s
+[INFO] Finished at: 2021-10-16T11:45:29-03:00
+[INFO] ------------------------------------------------------------------------
+
+
+Ejercicio 4
+cata@cata-UX550VD:~/Documents/Segundo Semestre/Ing_Software_III/ing-software-3/practico_5/ejemplo$ mvn archetype:generate -DgroupId=ar.edu.ucc -DartifactId=ejemplo -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< org.apache.maven:standalone-pom >-------------------
+[INFO] Building Maven Stub Project (No POM) 1
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] >>> maven-archetype-plugin:3.2.0:generate (default-cli) > generate-sources @ standalone-pom >>>
+[INFO] 
+[INFO] <<< maven-archetype-plugin:3.2.0:generate (default-cli) < generate-sources @ standalone-pom <<<
+[INFO] 
+[INFO] 
+[INFO] --- maven-archetype-plugin:3.2.0:generate (default-cli) @ standalone-pom ---
+[INFO] Generating project in Batch mode
+[INFO] ----------------------------------------------------------------------------
+[INFO] Using following parameters for creating project from Old (1.x) Archetype: maven-archetype-quickstart:1.0
+[INFO] ----------------------------------------------------------------------------
+[INFO] Parameter: basedir, Value: /home/cata/Documents/Segundo Semestre/Ing_Software_III/ing-software-3/practico_5/ejemplo
+[INFO] Parameter: package, Value: ar.edu.ucc
+[INFO] Parameter: groupId, Value: ar.edu.ucc
+[INFO] Parameter: artifactId, Value: ejemplo
+[INFO] Parameter: packageName, Value: ar.edu.ucc
+[INFO] Parameter: version, Value: 1.0-SNAPSHOT
+[INFO] project created from Old (1.x) Archetype in dir: /home/cata/Documents/Segundo Semestre/Ing_Software_III/ing-software-3/practico_5/ejemplo/ejemplo
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  18.412 s
+[INFO] Finished at: 2021-10-16T11:49:47-03:00
+
+cata@cata-UX550VD:~/Documents/Segundo Semestre/Ing_Software_III/ing-software-3/practico_5/ejemplo$ tree
+.
+└── ejemplo
+    ├── pom.xml
+    └── src
+        ├── main
+        │   └── java
+        │       └── ar
+        │           └── edu
+        │               └── ucc
+        │                   └── App.java
+        └── test
+            └── java
+                └── ar
+                    └── edu
+                        └── ucc
+                            └── AppTest.java
+
+12 directories, 3 files
+
+cata@cata-UX550VD:~/Documents/Segundo Semestre/Ing_Software_III/ing-software-3/practico_5/ejemplo/ejemplo$ sudo mvn clean package
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.google.inject.internal.cglib.core.$ReflectUtils$1 (file:/usr/share/maven/lib/guice.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of com.google.inject.internal.cglib.core.$ReflectUtils$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------------< ar.edu.ucc:ejemplo >-------------------------
+[INFO] Building ejemplo 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+Downloading from central: https://repo.maven.apache.org/maven2/junit/junit/3.8.1/junit-3.8.1.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/junit/junit/3.8.1/junit-3.8.1.pom (998 B at 640 B/s)
+Downloading from central: https://repo.maven.apache.org/maven2/junit/junit/3.8.1/junit-3.8.1.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/junit/junit/3.8.1/junit-3.8.1.jar (121 kB at 75 kB/s)
+[INFO] 
+[INFO] Building jar: /home/cata/Documents/Segundo Semestre/Ing_Software_III/ing-software-3/practico_5/ejemplo/ejemplo/target/ejemplo-1.0-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  02:29 min
+[INFO] Finished at: 2021-10-16T12:10:33-03:00
+[INFO] ------------------------------------------------------------------------
+cata@cata-UX550VD:~/Documents/Segundo Semestre/Ing_Software_III/ing-software-3/practico_5/ejemplo/ejemplo$ java -cp target/ejemplo-1.0-SNAPSHOT.jar ar.edu.ucc.App
+Hello World!
+
+Ejercicio 6 
+cata@cata-UX550VD:~/Documents/Segundo Semestre/Ing_Software_III/ing-software-3/practico_5/ejemplo-uber-jar$ mvn archetype:generate -DgroupId=ar.edu.ucc -DartifactId=ejemplo-uber.jar -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< org.apache.maven:standalone-pom >-------------------
+[INFO] Building Maven Stub Project (No POM) 1
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] >>> maven-archetype-plugin:3.2.0:generate (default-cli) > generate-sources @ standalone-pom >>>
+[INFO] 
+[INFO] <<< maven-archetype-plugin:3.2.0:generate (default-cli) < generate-sources @ standalone-pom <<<
+[INFO] 
+[INFO] 
+[INFO] --- maven-archetype-plugin:3.2.0:generate (default-cli) @ standalone-pom ---
+[INFO] Generating project in Batch mode
+[INFO] ----------------------------------------------------------------------------
+[INFO] Using following parameters for creating project from Old (1.x) Archetype: maven-archetype-quickstart:1.0
+[INFO] ----------------------------------------------------------------------------
+[INFO] Parameter: basedir, Value: /home/cata/Documents/Segundo Semestre/Ing_Software_III/ing-software-3/practico_5/ejemplo-uber-jar
+[INFO] Parameter: package, Value: ar.edu.ucc
+[INFO] Parameter: groupId, Value: ar.edu.ucc
+[INFO] Parameter: artifactId, Value: ejemplo-uber.jar
+[INFO] Parameter: packageName, Value: ar.edu.ucc
+[INFO] Parameter: version, Value: 1.0-SNAPSHOT
+[INFO] project created from Old (1.x) Archetype in dir: /home/cata/Documents/Segundo Semestre/Ing_Software_III/ing-software-3/practico_5/ejemplo-uber-jar/ejemplo-uber.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.718 s
+[INFO] Finished at: 2021-10-16T12:35:14-03:00
+[INFO] ------------------------------------------------------------------------
+
+
+cata@cata-UX550VD:~/Documents/Segundo Semestre/Ing_Software_III/ing-software-3/practico_5/ejemplo-uber-jar$ mvn clean package
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.058 s
+[INFO] Finished at: 2021-10-16T12:36:44-03:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] The goal you specified requires a project to execute but there is no POM in this directory (/home/cata/Documents/Segundo Semestre/Ing_Software_III/ing-software-3/practico_5/ejemplo-uber-jar). Please verify you invoked Maven from the correct directory. -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MissingProjectException
+
+Al compilarlo falla porque no tiene la clase logger. AL agregarle el texto en el pom.xml se puede compilar
+ 
+cata@cata-UX550VD:~/Documents/Segundo Semestre/Ing_Software_III/ing-software-3/practico_5/ejemplo-uber-jar/ejemplo-uber.jar$ mvn clean package
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< ar.edu.ucc:ejemplo-uber.jar >---------------------
+[INFO] Building ejemplo-uber.jar 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ ejemplo-uber.jar ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ ejemplo-uber.jar ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /home/cata/Documents/Segundo Semestre/Ing_Software_III/ing-software-3/practico_5/ejemplo-uber-jar/ejemplo-uber.jar/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ ejemplo-uber.jar ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to /home/cata/Documents/Segundo Semestre/Ing_Software_III/ing-software-3/practico_5/ejemplo-uber-jar/ejemplo-uber.jar/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ ejemplo-uber.jar ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /home/cata/Documents/Segundo Semestre/Ing_Software_III/ing-software-3/practico_5/ejemplo-uber-jar/ejemplo-uber.jar/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ ejemplo-uber.jar ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to /home/cata/Documents/Segundo Semestre/Ing_Software_III/ing-software-3/practico_5/ejemplo-uber-jar/ejemplo-uber.jar/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ ejemplo-uber.jar ---
+[INFO] Surefire report directory: /home/cata/Documents/Segundo Semestre/Ing_Software_III/ing-software-3/practico_5/ejemplo-uber-jar/ejemplo-uber.jar/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running ar.edu.ucc.AppTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ ejemplo-uber.jar ---
+[INFO] Building jar: /home/cata/Documents/Segundo Semestre/Ing_Software_III/ing-software-3/practico_5/ejemplo-uber-jar/ejemplo-uber.jar/target/ejemplo-uber.jar-1.0-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.229 s
+[INFO] Finished at: 2021-10-16T12:37:58-03:00
+[INFO] ------------------------------------------------------------------------
+
+cata@cata-UX550VD:~/Documents/Segundo Semestre/Ing_Software_III/ing-software-3/practico_5/ejemplo-uber-jar/ejemplo-uber.jar$ java -cp target\ejemplo-uber-jar-1.0-SNAPSHOT.jar ar.edu.ucc.App.Class
+Error: Could not find or load main class ar.edu.ucc.App.Class
+cata@cata-UX550VD:~/Documents/Segundo Semestre/Ing_Software_III/ing-software-3/practico_5/ejemplo-uber-jar/ejemplo-uber.jar$  java -cp target/ejemplo-uber-jar-1.0-SNAPSHOT.jar:$HOME/.m2/repository/org/slf4j/slf4j-api/1.7.22/slf4j-api-1.7.22.jar:$HOME/.m2/repository/ch/qos/logback/logback-classic/1.2.1/logback-classic-1.2.1.jar:$HOME/.m2/repository/ch/qos/logback/logback-core/1.2.1/logback-core-1.2.1.jar ar.edu.ucc.App
+12:40:13.499 [main] INFO ar.edu.ucc.App - Hola Mundo!
+
+cata@cata-UX550VD:~/Documents/Segundo Semestre/Ing_Software_III/ing-software-3/practico_5/ejemplo-uber-jar/ejemplo-uber.jar$ java -jar target/ejemplo-uber-jar.jar
+12:47:44.542 [main] INFO ar.edu.ucc.App - Hola Mundo!
+
+Ejercicio 8
+Compiled successfully!
+
+You can now view my-app in the browser.
+
+  Local:            http://localhost:3000
+  On Your Network:  http://192.168.0.183:3000
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+
+Ejercicio 9
+$ cookiecutter https://github.com/candidtim/cookiecutter-flask-minimal.git
+application_name ejemploPython: test
+package_name ejemploPython: test
+$
+
+
