@@ -1,6 +1,9 @@
 
 
+
 EJERCICIO 6 pipeline syntax
+
+
 pipeline {
     agent any
 
