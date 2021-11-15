@@ -87,6 +87,8 @@ Modifique los test para que alguno pase todos
 Para generar selectores fácilmente utilizamos plugins como (Firefox o Chrome)
 TruePath https://addons.mozilla.org/en-US/firefox/addon/truepath/
 ChroPath https://chrome.google.com/webstore/detail/chropath/ljngjbnaijcbncmcnjfhigebomdlkcjo
+
+
 3- Testeando la aplicación spring-boot
 En un directorio, por ejemplo .\proyectos\spring-boot-it ejecutar:
 npx create-codeceptjs .
@@ -95,6 +97,9 @@ Instalar CodeceptJS con la librería webdriverio npm install codeceptjs chai --s
 Inicializar CodeceptJS: npx codeceptjs init
 
 Responder las preguntas. Aceptar valores por defecto. Cuando pregunte por url colocar http://localhost:8080 y y el nombre de los tests poner spring-boot
+
+![image](https://user-images.githubusercontent.com/48757813/141854947-922e38fe-3daf-4504-878e-334b123db2ce.png)
+
 
 Editar el archivo generado spring-boot_tests.js:
 
@@ -113,6 +118,10 @@ Scenario('Verify return value', async () => {
 	//console.log(res);
 	expect(res.data.message).to.eql('Spring boot says hello from a Docker container');
 });
+
+![image](https://user-images.githubusercontent.com/48757813/141854977-d1ba0110-2940-487e-9119-24cc9d81e0a2.png)
+
+
 Reemplazar la sección helpers de codecept.conf.js por:
 	helpers: {
 		REST: {
@@ -121,11 +130,18 @@ Reemplazar la sección helpers de codecept.conf.js por:
 			}
 		}
 	}
+
+![image](https://user-images.githubusercontent.com/48757813/141855017-021df893-d35d-408c-bcd5-804a8b11e5fe.png)
+
+	
 Levantar la aplicación spring-boot en otra consola (usando java o Docker):
 cd ./proyectos/spring-boot
 java -jar target/spring-boot-sample-actuator-2.0.2.jar
 Ejecutar los tests desde la carpeta .\proyectos\spring-boot-it
 npx codeceptjs run --steps
+
+![image](https://user-images.githubusercontent.com/48757813/141855056-af2288d4-86fe-4d8f-81a3-0ef0ed4dc5dc.png)
+
 Analizar resultados
 4- Habilitar reportes para utilizarlos en CICD
 Instalar el módulo para reporting
@@ -150,4 +166,6 @@ Reemplazar la key mocha en el archivo codecept.conf.js por:
 	}
 Ejecutar los tests nuevamente
 npx codeceptjs run --steps --reporter mocha-multi
-La salida compatible con Jenkins esta en ./output/results.xml
+
+![image](https://user-images.githubusercontent.com/48757813/141855256-c978ccd8-9fa5-4d5d-9292-a566c81b7a43.png)
+
